@@ -1,0 +1,6 @@
+{% extends 'mainpage/base.html'  %}
+{% block body %}
+<h1>
+  这是购物车
+</h1>
+{% endblock body %}

@@ -1,0 +1,6 @@
+<form action="{% url 'users:login'  %}" method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button name="submit">登录</button>
+  <input type="hidden" name="next" value="{% url 'users:index' %}"/>
+</form>

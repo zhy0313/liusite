@@ -1,0 +1,5 @@
+{% extends 'mainpage/base.html' %}
+
+{% block body %}
+这是user的主页
+{% endblock body  %}

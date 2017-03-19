@@ -1,0 +1,11 @@
+{% extends 'mainpage/base.html' %}
+
+{% block body %}
+这是
+{% if user.is_authenticated %}
+{{ user.username }}
+{% else %}
+user
+{% endif %}
+的主页
+{% endblock body  %}

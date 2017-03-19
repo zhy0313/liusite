@@ -1,0 +1,4 @@
+div #tail {
+    position:absolute;
+    top:90%
+}

@@ -1,0 +1,13 @@
+{% extends "mainpage/base.html" %}
+
+{% block body %}
+<h1>
+  货物{{}}
+</h1>
+
+{% for good in goods %}
+{{ good.goods_info }}
+{{ good.goods_pic }}
+{{ good.goods_url }}
+{% endfor  %}
+{% endblock body %}

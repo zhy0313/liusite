@@ -1,0 +1,27 @@
+
+{% block head %}
+<html>
+  <head>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'mainpage/base.css'  %}" />
+    <title>
+      
+    </title>
+  </head>
+  {% endblock head %}
+
+
+
+  {% block body %}
+
+  {% endblock body %}
+
+
+  {% block tail  %}
+  <div id="tail" >
+
+
+    <a href="http://www.bilibili.com" name="basespace" value="宅男大本营">宅!!</a>
+
+  </div>
+  {% endblock tail %}

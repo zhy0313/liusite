@@ -1,0 +1,62 @@
+<html>
+
+  <head>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'mainpage/base.css' %}" />
+  </head>
+  <div id="head">
+    <div id="showinleft">
+      <a href="{% url 'mainpage:index' %}">首页</a>
+    </div>
+    <div id="showinright">
+      <a href="#">
+	右侧
+      </a>
+      {% if user.is_authenticated %}
+      {# 之后将用户名对应的点击换成对用户信息的修改页面  #}
+
+      {{ user.username }}
+      <a href="{% url 'users:log_out' %}" > 注销 </a>
+      {#<a href="{% url 'users:zhuxiao' %}" > 注销 </a> 之前有个bug,只写上面那句会报错,说log_out 需要0个位置参数,0个关键字参数,并且找到0个,不知道为什么会报这个错,重写了urls和链接就好了.... #}
+      <a href="#"> 我的 </a>
+      <a href="{% url 'shoppingcart:index'  %}"> 购物车 </a>
+      <a href="#"> 收藏夹 </a>
+      
+      {% else %}
+      <a href="{% url 'users:login' %}"> 登录 </a>
+      <a href="#"> 注册 </a>
+      
+      {% endif %}
+      <!-- <div style="height:13%; width:1px; border-left:1px #000 solid;float:left;"></div> -->
+      <a href="#"> 客服 </a>
+      <a href="#"> 网站导航 </a>
+    </div>
+    {% block head %}
+    {% endblock head %}
+  </div>
+
+
+
+  
+
+
+
+  <div id="body">
+    <p>
+      {% block body %}
+      {% endblock body %}
+    </p>
+  </div>
+
+
+
+
+  {% block tail  %}
+  {% endblock tail %}
+  <div id="tail" >
+
+
+    <a href="http://www.bilibili.com" name="basespace" value="宅男大本营">宅!!</a>
+
+  </div>
+
